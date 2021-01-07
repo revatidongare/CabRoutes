@@ -28,7 +28,7 @@
                     <div class="section-title  text-center">
                         <h2>Contact Us</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Fill in the form below to instantly schedule a call with us.</p>
                     </div>
                 </div>
                 <!-- Page Title End -->
