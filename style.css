@@ -2221,7 +2221,7 @@ body,
 	background-image: url("assets/img/page-title.jpg");
 	background-position: center center;
 	background-size: cover;
-	padding-top: 220px;
+	padding-top: 160px;
 }
 
 #page-title-area .section-title {
@@ -2946,7 +2946,7 @@ body,
 }
 
 .log-btn button {
-	background-color: #fff;
+	background-color: #f5d23e;
 	border-color: #fff;
 	border-radius: 4px;
 	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

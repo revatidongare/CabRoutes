@@ -8,7 +8,7 @@
                     <!--== Logo Start ==-->
                     <div class="col-lg-4">
                         <a href="index.php" class="logo">
-                            <img src="assets/img/partner/cab.png" width="40%" alt="JSOFT">
+                            <img src="assets/img/partner/cab.png" width="30%" alt="JSOFT">
                         </a>
                     </div>
                     <!--== Logo End ==-->

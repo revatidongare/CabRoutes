@@ -16,49 +16,22 @@
                 <div class="col-lg-6 col-md-6 m-auto">
                     <div class="login-page-content">
                         <div class="login-form">
-                            <h3>Driver Register</h3>
+                            <h3>Passenger Register</h3>
                             <form action="index.html">
                                 <div class="name">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <input type="text" placeholder="Driver Full Name ">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" placeholder="Vehical Number ">
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Passenger Full Name">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="username">
-                                    <input type="address" placeholder="Driver Address ">
+                                    <input type="address" placeholder="Passenger Address ">
                                 </div>
                                
                                  <div class="row">
                                 <div class="col-md-5" style="margin:auto";>
-                                     <label>Driver Photos</label>
-                                </div>
-                                <div class="col-md-7">
-                                    <input type="file" name="image">
-                                </div>
-                                </div>
-                                 <div class="row">
-                                <div class="col-md-5" style="margin:auto";>
-                                     <label>Vehicle Photos with Vehicle Number</label>
-                                </div>
-                                <div class="col-md-7">
-                                    <input type="file" name="image">
-                                </div>
-                                </div>
-                                 <div class="row">
-                                <div class="col-md-5" style="margin:auto";>
-                                     <label>Vehicle Amenities</label>
-                                </div>
-                                <div class="col-md-7">
-                                    <input type="file" name="image">
-                                </div>
-                                </div>
-                                 <div class="row">
-                                <div class="col-md-5" style="margin:auto";>
-                                     <label>Driver License Copy</label>
+                                     <label>Passenger Photo</label>
                                 </div>
                                 <div class="col-md-7">
                                     <input type="file" name="image">
@@ -66,7 +39,7 @@
                                 </div>
                                    <div class="row">
                                 <div class="col-md-5" style="margin:auto";>
-                                     <label>Driver Aadhaar Card</label>
+                                     <label>Passenger Aadhaar Card</label>
                                 </div>
                                 <div class="col-md-7">
                                     <input type="file" name="image">
@@ -74,28 +47,13 @@
                                 </div>
                                 <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Driver License Issued  date">
+                                    <input type="text" placeholder="Contact Number">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Driver License Expiry Date">
+                                    <input type="text" placeholder="Whatsapp Number">
                                 </div>
                                 </div>
-                                <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Driver total driving experience">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Vehicle Insurance Issue date">
-                                </div>
-                                </div>
-                                <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Contact Number-1">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Contact Number-2">
-                                </div>
-                                </div>
+
                                 
                                 <div class="password">
                                     <input type="text" placeholder="Email Address-1">
@@ -119,14 +77,14 @@
                                      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                                 </div>
                                 <div class="col-md-11" style="margin: auto;padding-right: 300px;";>
-                                   <a href="driverterms.php">Terms and Conditions</a> 
+                                   <a href="passengerterms.php">Terms and Conditions</a> 
                                 </div>
                                 </div>
                                 <div class="log-btn">
                                     <button type="submit"><i class="fa fa-check-square"></i> Register</button>
                                 </div>
                                 <div class="create-ac">
-                            <p>Have an account? <a href="driverlogin.php">Sign In</a></p>
+                            <p>Have an account? <a href="passengerlogin.php">Sign In</a></p>
                         </div>
                             </form>
                         </div>

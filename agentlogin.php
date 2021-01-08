@@ -16,8 +16,7 @@
                 <div class="col-lg-4 col-md-8 m-auto">
                     <div class="login-page-content">
                         <div class="login-form">
-                           
-                             <h4>Driver Login</h4>
+                            <h4>Agent Login</h4>
                             <form action="index.html">
                                 <div class="username">
                                     <input type="text" placeholder="Email or Username">
@@ -26,18 +25,19 @@
                                     <input type="password" placeholder="Password">
                                 </div>
                                 <div class="text-right">
-                                                <a class="forgot-link" href="driverregister.php">No account Yet? </a>
+                                                <a class="forgot-link" href="agentregister.php">No account Yet? </a>
                                 </div>
                                 <div class="log-btn">
                                     <button type="submit"><i class="fa fa-sign-in"></i> Log In</button>
-                                </div>
-                                 <div class="text-right">
-                                                <a class="forgot-link" href="driverlogin.php">Forgot Password</a>
+                                    <div class="text-right">
+                                                <a class="forgot-link" href="agentlogin.php">Forgot Password</a>
                                             </div>
+                                </div>
                             </form>
                         </div>
                     </div>
-                </div> 
+                </div>
+               
             </div>
         </div>
     </section>
