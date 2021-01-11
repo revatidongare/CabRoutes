@@ -29,7 +29,7 @@
                                     </div>
                                 </div>
                                 <div class="username">
-                                    <input type="address" placeholder="Agent Address ">
+                                    <input type="address" placeholder="Agency Address ">
                                 </div>
                                 <div class="username">
                                     <input type="text" placeholder="Agent Designation ">

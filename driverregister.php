@@ -90,10 +90,11 @@
                                 </div>
                                 <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Contact Number-1">
+                                    <input type="text" placeholder="Contact Number">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Contact Number-2">
+                                    <input type="text" placeholder="Emergency Contact Number
+                                    ">
                                 </div>
                                 </div>
                                 
