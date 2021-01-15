@@ -17,19 +17,25 @@
                     <div class="login-page-content">
                         <div class="login-form">
                             <h3>Driver Register</h3>
-                            <form action="index.html">
+                            <form action="driverregisterback.php" method="post" enctype="multipart/form-data">
                                 <div class="name">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" placeholder="Driver Full Name ">
+                                            <input type="text" placeholder="Driver Full Name" name="name" id="name">
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" placeholder="Vehical Number ">
+                                            <input type="text" placeholder="Vehical Number " name="vname" id="vname">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="username">
-                                    <input type="address" placeholder="Driver Address ">
+                                    <input type="address" placeholder="Driver Address" name="address" id="address">
+                                </div> 
+                                 <div class="username">
+                                    <input type="text" placeholder="Car Type" name="type" id="type">
+                                </div>
+                                <div class="username">
+                                    <input type="text" placeholder="Passenger Limit" name="limit" id="limit">
                                 </div>
                                
                                  <div class="row">
@@ -37,7 +43,7 @@
                                      <label>Driver Photos</label>
                                 </div>
                                 <div class="col-md-7">
-                                    <input type="file" name="image">
+                                    <input type="file" name="i" id="i">
                                 </div>
                                 </div>
                                  <div class="row">
@@ -45,7 +51,7 @@
                                      <label>Vehicle Photos with Vehicle Number</label>
                                 </div>
                                 <div class="col-md-7">
-                                    <input type="file" name="image">
+                                    <input type="file" name="im" id="im">
                                 </div>
                                 </div>
                                  <div class="row">
@@ -53,7 +59,7 @@
                                      <label>Vehicle Amenities</label>
                                 </div>
                                 <div class="col-md-7">
-                                    <input type="file" name="image">
+                                    <input type="file"name="ima" id="ima">
                                 </div>
                                 </div>
                                  <div class="row">
@@ -61,7 +67,7 @@
                                      <label>Driver License Copy</label>
                                 </div>
                                 <div class="col-md-7">
-                                    <input type="file" name="image">
+                                    <input type="file" name="imag" id="imag">
                                 </div>
                                 </div>
                                    <div class="row">
@@ -69,47 +75,50 @@
                                      <label>Driver Aadhaar Card</label>
                                 </div>
                                 <div class="col-md-7">
-                                    <input type="file" name="image">
+                                    <input type="file" name="image" id="image">
                                 </div>
+                                </div>
+                                 <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Email Address" name="email" id="email">
+                                </div>
+                                 <div class="col-md-6">
+                                    <input type="text" placeholder="Driver total driving experience" name="texp" id="texp">
+                                </div>
+                            </div>
+                                <div class="row">
+                                <div class="col-md-6">
+                                    <label>Driver License Issued  date</label>
+                                    <input type="date"name="idate" id="idate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Driver License Expiry Date</label>
+                                    <input type="date" name="edate" id="edate">
+                                </div>
+                                </div>
+                                   <div class="row">
+                                <div class="col-md-12">
+                                    <label>Vehicle Insurance Issue date</label>
+                                    <input type="date"name="iidate" id="iidate">
+                                </div>
+                                
                                 </div>
                                 <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Driver License Issued  date">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Driver License Expiry Date">
-                                </div>
-                                </div>
-                                <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Driver total driving experience">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Vehicle Insurance Issue date">
-                                </div>
-                                </div>
-                                <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Contact Number">
+                                    <input type="text" placeholder="Contact Number" name="cnumber" id="cnumber">
                                 </div>
                                 <div class="col-md-6">
                                     <input type="text" placeholder="Emergency Contact Number
-                                    ">
+                                    " name="enumber" id="enumber">
                                 </div>
                                 </div>
                                 
-                                <div class="password">
-                                    <input type="text" placeholder="Email Address-1">
-                                </div>
-                                <div class="password">
-                                    <input type="text" placeholder="Email Address-2">
-                                </div>
                                  <div class="row">
                                 <div class="col-md-2">
-                                   <label class="focus-label" style="margin-top: 30px;"> Password </label>
+                                   <label class="focus-label"  style="margin-top: 30px;"> Password </label>
                                 </div>
                                 <div class="col-md-6">
-                                   <input type="password" value="" id="myInput" style="margin: 20px;background-color: aliceblue; border-color: black";>
+                                   <input type="password" value="" id="myInput" style="margin: 20px;background-color: aliceblue; border-color: black"; name="password" id="password">
                                </div>
                                      <div class="col-md-4">
                                     <input type="checkbox" onclick="myFunction()">Show Password
@@ -124,7 +133,7 @@
                                 </div>
                                 </div>
                                 <div class="log-btn">
-                                    <button type="submit"><i class="fa fa-check-square"></i> Register</button>
+                                    <button type="driverregister" name="driverregister"><i class="fa fa-check-square"></i> Register</button>
                                 </div>
                                 <div class="create-ac">
                             <p>Have an account? <a href="driverlogin.php">Sign In</a></p>

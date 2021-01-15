@@ -17,20 +17,20 @@
                     <div class="login-page-content">
                         <div class="login-form">
                             <h4>Passenger Login</h4>
-                            <form action="index.html">
+                            <form action="passengersession.php" method="post">
                                 <div class="username">
-                                    <input type="text" placeholder="Email or Username">
+                                    <input type="text" placeholder="Email or Username" name="email" id="email">
                                 </div>
                                 <div class="password">
-                                    <input type="password" placeholder="Password">
+                                    <input type="password" placeholder="Password" name="password" id="password">
                                 </div>
                                 <div class="text-right">
                                                 <a class="forgot-link" href="passengerregister.php">No account Yet? </a>
                                 </div>
                                 <div class="log-btn">
-                                    <button type="submit"><i class="fa fa-sign-in"></i> Log In</button>
+                                    <button type="submit" name="passengerlogin" id="passengerlogin"><i class="fa fa-sign-in"></i> Log In</button>
                                     <div class="text-right">
-                                                <a class="forgot-link" href="passengerlogin.php">Forgot Password</a>
+                                    <a class="forgot-link" href="passengerlogin.php">Forgot Password</a>
                                             </div>
                                 </div>
                             </form>

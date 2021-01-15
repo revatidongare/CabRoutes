@@ -53,6 +53,20 @@
                                     </ul>
                                 </li> -->
                                 <li><a href="contact.php">Contact</a></li>
+                                 <li><a href="#">Register</a>
+                                    <ul>
+                                        <li><a href="agentregister.php">Agent Register</a></li>
+                                    <li><a href="driverregister.php">Driver Register</a></li>
+                                <li><a href="passengerregister.php">Passenger Register</a></li>
+                                    </ul>
+                                </li> 
+                                <li><a href="#">Login</a>
+                                    <ul>
+                                        <li><a href="agentlogin.php">Agent Login</a></li>
+                                        <li><a href="driverlogin.php">Driver Login</a></li>
+                                    <li><a href="passengerlogin.php">Passenger Login</a></li>
+                                    </ul>
+                                </li> 
                             </ul>
                         </nav>
                     </div>

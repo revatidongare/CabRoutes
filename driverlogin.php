@@ -18,21 +18,21 @@
                         <div class="login-form">
                            
                              <h4>Driver Login</h4>
-                            <form action="index.html">
+                           <form action="driversession.php" method="post">
                                 <div class="username">
-                                    <input type="text" placeholder="Email or Username">
+                                     <input type="text" name="email" id="email" placeholder="Email or Username">
                                 </div>
                                 <div class="password">
-                                    <input type="password" placeholder="Password">
+                        <input type="password" name="password" id="password" placeholder="Password">
                                 </div>
                                 <div class="text-right">
-                                                <a class="forgot-link" href="driverregister.php">No account Yet? </a>
+                                <a class="forgot-link" href="driverregister.php">No account Yet? </a>
                                 </div>
                                 <div class="log-btn">
-                                    <button type="submit"><i class="fa fa-sign-in"></i> Log In</button>
+                                    <button type="submit" name="driverlogin" id="driverlogin"><i class="fa fa-sign-in"></i> Log In</button>
                                 </div>
                                  <div class="text-right">
-                                                <a class="forgot-link" href="driverlogin.php">Forgot Password</a>
+                                    <a class="forgot-link" href="driverlogin.php">Forgot Password</a>
                                             </div>
                             </form>
                         </div>
