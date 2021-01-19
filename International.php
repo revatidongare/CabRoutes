@@ -26,9 +26,24 @@
                                                 <div class="popular-cars-wrap">
                                                     <div class="popucar-menu text-center">
                                                         <form action="back.php">
-                                                            <div class="pick-location bookinput-item">
-                                                                <input type="text" name="picklocation" placeholder="Pick Location">
-                                                            </div>
+                                                           <div class="car-choose bookinput-item">
+
+                                                        <select class="custom-select">
+                                                             <option selected>Pickup Location</option>
+                                                            <?php 
+                                                $query = "SELECT * FROM `pickup` where `flag`=3";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $location){
+                                                    ?>
+                                                       
+                                                        <option><?php echo $location['location']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
                                                             <div class="pick-date bookinput-item">
                                                             <input id="startDate2" placeholder="Pick Date" />
                                                         </div>
@@ -133,9 +148,24 @@
                                                         </select>  
                                                       </div>
                                                             
-                                                            <div class="pick-location bookinput-item">
-                                                               <input type="text" name="droplocation" placeholder="Drop Location">
-                                                           </div>
+                                                          <div class="car-choose bookinput-item">
+
+                                                        <select class="custom-select">
+                                                             <option selected>Drop Location</option>
+                                                            <?php 
+                                                $query = "SELECT * FROM `droplocation` where `flag`=3";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $location){
+                                                    ?>
+                                                       
+                                                        <option><?php echo $location['location']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
 
                                                             <div class="retern-date bookinput-item">
                                                 <input id="endDate2" placeholder="Return Date" />

@@ -22,7 +22,7 @@ if(isset($_POST['passengerregister'])){
     $uploadOk = 2;
   }
     // Allow certain file formats
-  if($iconFileType != "jpg" && $iconFileType != "jpeg" && $iconFileType != "png" ) {
+  if($iconFileType != "jpg" && $iconFileType != "jpeg" && $iconFileType != "png") {
         // echo "Sorry, only PDF files are allowed.";
     $uploadOk = 3;
   }
