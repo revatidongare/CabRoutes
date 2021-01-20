@@ -32,7 +32,7 @@
 							</ul>
 						</div>
 						<div class="col-sm-6 col">
-								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Loation</a>
+								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Location</a>
 							</div>
 					</div>
 					<br>
@@ -47,6 +47,7 @@
 												<tr>
 													<th>Location ID</th>
 													<th>Location</th>
+														<th>Sub Location</th>
 													<th>Type</th>
 												</tr>
 											</thead>
@@ -63,6 +64,7 @@
 													<tr>
 										<td><?php echo $location['id']?></td>
 								<td><?php echo $location['location']?></td>
+								<td><?php echo $location['sublocation']?></td>
 								<?php if($location['flag']==1){
 								$loc = "Local";
 							}
@@ -134,6 +136,12 @@
 										<div class="form-group">
 											<label>Location</label>
 											<input type="text" name="location" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-12">
+										<div class="form-group">
+											<label>Sub Location</label>
+											<input type="text" name="slocation" class="form-control">
 										</div>
 									</div>
 									</div>

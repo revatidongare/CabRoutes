@@ -197,7 +197,7 @@
                                            
                                                      
                                                         <div class="car-choose bookinput-item">
-                                                            <select class="custom-select">
+                                                        <select class="custom-select">
                                                               <option selected>Choose Vehicle</option>
                                                               <option value="1">BMW</option>
                                                               <option value="2">Audi</option>
@@ -211,8 +211,7 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    </div>                
-                           
+                                    </div>                                   
                 </div>
             </div>
                                 </div>

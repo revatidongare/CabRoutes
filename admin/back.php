@@ -26,8 +26,9 @@ $conn=null;
 // pickup
 if(isset($_POST['picklocation'])){
   $location = $_POST['location'];
+  $slocation = $_POST['slocation'];
   $type = $_POST['type'];
-  $q = "INSERT INTO `pickup`(`location`,`flag`)VALUES('$location','$type')";
+  $q = "INSERT INTO `pickup`(`location`,`sublocation`,`flag`)VALUES('$location','$slocation','$type')";
   $stmt=$conn->prepare($q);
   $stmt->execute();
   $row = $stmt->fetch();
