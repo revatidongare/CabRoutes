@@ -31,12 +31,43 @@
                                 <div class="username">
                                     <input type="address" placeholder="Driver Address" name="address" id="address">
                                 </div> 
-                                 <div class="username">
-                                    <input type="text" placeholder="Car Type" name="type" id="type">
-                                </div>
-                                <div class="username">
-                                    <input type="text" placeholder="Passenger Limit" name="limit" id="limit">
-                                </div>
+                                 <div class="car-choose bookinput-item">
+                                    <select class="carr" name="type">
+                                        <option selected>Car Type</option>
+                                                <?php 
+                                                $query = "SELECT * FROM `addcar`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $car){
+                                                    ?>
+                                                    <option value="<?php echo $car['cartype']?>"><?php echo $car['cartype']?></option>
+                                                         <?php }?>
+                                        </select>
+                                    </div>
+                                    <br>
+                                <br>
+                               <div class="car-choose bookinput-item">
+                                    <select class="carrr" name="type">
+                                        <option selected>Passenger Limit</option>
+                                                            <?php 
+                                            $query = "SELECT * FROM `passengerlimit`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $passenger){
+                                                    ?>
+                                                       
+                                                        <option value="<?php echo $passenger['passengerlim']?>"><?php echo $passenger['passengerlim']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
+                                                      <br>
+                                                      <br>
                                
                                  <div class="row">
                                 <div class="col-md-5" style="margin:auto";>

@@ -32,59 +32,15 @@
 							</ul>
 						</div>
 						<div class="col-sm-4 col">
-								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Pickup Location</a>
+								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add CarType</a>
 							</div>
-							<div class="col-sm-8 col">
-								<a href="#add_locationn" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Sub Location</a>
+							
+							<div class="col-sm-4 col">
+								<a href="#add_passenger" data-toggle="modal" class="btn btn-primary float-right mt-2">Add PassengerLimit</a>
 							</div>
 					</div>
 					<br>
 					<div class="row">
-					<div class="col-sm-6">
-						<div class="card">
-							<div class="card-body">
-								<div class="table-responsive">
-									<div class="table-responsive">
-										<table class="datatable table table-hover table-center mb-0">
-											<thead>
-												<tr>
-													<th>Location ID</th>
-													<th>Location</th>
-													<th>Type</th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php 
-												$query = "SELECT * FROM `pickup`";
-												include '../config.php';
-												$stmt=$conn->prepare($query);
-												$stmt->execute();
-												$result=$stmt->fetchAll();
-												$conn=null;
-												foreach($result as $location){
-													?>
-													<tr>
-										<td><?php echo $location['id']?></td>
-								<td><?php echo $location['location']?></td>
-								<?php if($location['flag']==1){
-								$loc = "Local";
-							}
-							else if($location['flag']==2){
-								$loc = "Outstation";
-							}
-							else{
-								$loc = "International";
-							} ?>
-								<td><?php echo $loc; ?></td>
-													</tr>
-												<?php }?>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 						<div class="col-sm-6">
 						<div class="card">
 							<div class="card-body">
@@ -93,14 +49,13 @@
 										<table class="datatable table table-hover table-center mb-0">
 											<thead>
 												<tr>
-													<th>Location ID</th>
-													<th>Location</th>
-													<th>Sub Location</th>
+													<th>Car Id</th>
+													<th>CarType</th>
 												</tr>
 											</thead>
 											<tbody>
 												<?php 
-												$query = "SELECT * FROM `subpickup`";
+												$query = "SELECT * FROM `addcar`";
 												include '../config.php';
 												$stmt=$conn->prepare($query);
 												$stmt->execute();
@@ -109,32 +64,52 @@
 												foreach($result as $location){
 													?>
 													<tr>
-										<td><?php echo $location['subid']?></td>
-										
-											<?php
-											$lo =  $location['id'];
-									$q = "SELECT * FROM `pickup` where `id`= '$lo'";
-									include '../config.php';
-											$stmt1=$conn->prepare($q);
-												$stmt1->execute();
-												$result1=$stmt1->fetchAll();
-												$conn=null;
-												foreach($result1 as $loc){
-													?>
-												<td><?php echo $loc['location']?></td>
-												<?php
-											}?>
-
-
-								<td><?php echo $location['sublocation']?></td>
-						<?php }?>
+										<td><?php echo $location['carid']?></td>
+								<td><?php echo $location['cartype']?></td>
+								<?php }?>
 											</tbody>
 										</table>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>			
+					</div>
+
+
+
+						<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<div class="table-responsive">
+									<div class="table-responsive">
+										<table class="datatable table table-hover table-center mb-0">
+											<thead>
+												<tr>
+													<th>Passenger Id</th>
+													<th>Passenger Limit</th>
+												</tr>
+											</thead>
+											<tbody>
+												<?php 
+											$query = "SELECT * FROM `passengerlimit`";
+												include '../config.php';
+												$stmt=$conn->prepare($query);
+												$stmt->execute();
+												$result=$stmt->fetchAll();
+												$conn=null;
+												foreach($result as $car){
+													?>
+													<tr>
+										<td><?php echo $car['passengerid']?></td>
+								<td><?php echo $car['passengerlim']?></td>
+								<?php }?>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>				
 				</div>
 				</div>
 				<!-- /Page Header -->
@@ -175,7 +150,7 @@
 				<div class="modal-dialog modal-dialog-centered" role="document" >
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title">Add Location</h5>
+							<h5 class="modal-title">Add CarType</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -185,23 +160,12 @@
 								<div class="row form-row">
 									<div class="col-12 col-sm-12">
 										<div class="form-group">
-											<label>Location</label>
-											<input type="text" name="location" class="form-control">
+											<label>Car Type</label>
+											<input type="text" name="typee" class="form-control">
 										</div>
 									</div>
 									</div>
-									 <div class="car-choose bookinput-item">
-                                                          <select class="custom-select" name="type">
-                                                             <option selected>Choose Type</option>
-                                                              <option value="1">Local</option>
-                                                              <option value="2">Outstation</option>
-                                                              <option value="3">International</option>
-                                                          </select>
-                                                      </div>
-									
-								<br>
-								<br>
-								<button type="submit" name="picklocation" class="btn btn-primary btn-block">Add Location</button>
+								<button type="submit" name="cartype" class="btn btn-primary btn-block">Add CarType</button>
 							</form>
 						</div>
 					</div>
@@ -210,57 +174,31 @@
 
 
 
-
-
-			<div class="modal fade" id="add_locationn" aria-hidden="true" role="dialog">
+				<div class="modal fade" id="add_passenger" aria-hidden="true" role="dialog">
 				<div class="modal-dialog modal-dialog-centered" role="document" >
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title">Add Sub Location</h5>
+							<h5 class="modal-title">Add PassengerLimit</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
 						<div class="modal-body">
 							<form action="back.php" method="post" enctype="multipart/form-data">
-								 <div class="car-choose bookinput-item">
-                                                           <select class="custom-select" name="locationid">
-                                                             <option selected>Choose Location</option>
-                                                            <?php 
-                                                $query = "SELECT * FROM `pickup`";
-                                                include '../config.php';
-                                                $stmt=$conn->prepare($query);
-                                                $stmt->execute();
-                                                $result=$stmt->fetchAll();
-                                                $conn=null;
-                                                foreach($result as $location){
-                                                    ?>
-                                                       
-                                                        <option value="<?php echo $location['id']?>">
-                                             <?php echo $location['location']?></option>
-                                                         <?php }?>
-                                                          </select>
-                                                      </div>
-                                                      <br>
-                                                      <br>
 								<div class="row form-row">
 									<div class="col-12 col-sm-12">
 										<div class="form-group">
-											<label>Sub Location</label>
-											<input type="text" name="locationn" class="form-control">
+											<label>Passenger Limit</label>
+											<input type="text" name="limit" class="form-control">
 										</div>
 									</div>
-									</div>	
-								<br>
-								<br>
-								<button type="submit" name="subpicklocation" class="btn btn-primary btn-block">Add Sub Location</button>
+									</div>
+								<button type="submit" name="passlimit" class="btn btn-primary btn-block">Add PassengerLimit</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- /ADD Modal -->
-
 			<?php
     if(isset($_GET['q'])) {            
             if($_GET['q'] == 3){ ?>

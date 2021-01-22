@@ -29,6 +29,9 @@
 						<li><a href="drop.php">Drop Location</a></li>
 					</ul>
 				</li>
+				<li> 
+								<a href="addcar.php"><i class="fa fa-car" aria-hidden="true"></i> <span>Add CarType</span></a>
+							</li>
 							<!-- <li> 
 								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
 							</li> -->

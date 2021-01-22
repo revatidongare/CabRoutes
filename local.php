@@ -45,9 +45,14 @@
                                                          <?php }?>
                                                           </select>
                                                       </div>
-                                                            
-                                                            <div class="car-choose bookinput-item">
+                                                      <div class="car-choose bookinput-item">
 
+                                                        <select class="custom-select">
+                                                             <option selected>Pickup SubLocation</option>
+                                                          </select>
+                                                      </div>
+                                                            
+                                                    <div class="car-choose bookinput-item">
                                                         <select class="custom-select">
                                                              <option selected>Drop Location</option>
                                                             <?php 
@@ -64,13 +69,20 @@
                                                          <?php }?>
                                                           </select>
                                                       </div>
+                                                     <div class="car-choose bookinput-item">
+
+                                                        <select class="custom-select">
+                                                             <option selected>Drop SubLocation</option>
+                                                          </select>
+                                                      </div>
                                                            <div class="pick-date bookinput-item">
                                                             <input id="startDate2" placeholder="Pick Date" />
                                                         </div>
                                                         <!-- <div class="retern-date bookinput-item">
                                                 <input id="endDate2" placeholder="Return Date" />
-                                            </div> -->
-                                                       <div class="car-choose bookinput-item">
+                                            </div> --><br>
+                                      <br>
+                                             <div class="car-choose bookinput-item">
                                                         <select class="form-control" data-testid="selectTime">
                                                         <option value="12:00 AM">Pickup Time</option>
                                                             <option value="12:15 AM">12:15 AM</option>
@@ -170,11 +182,11 @@
                                                             <option value="11:45 PM">11:45 PM</option>  
                                                         </select>  
                                                       </div>
+
                                                        <div class="retern-date bookinput-item">
                                                 <input id="endDate2" placeholder="Return Date" />
                                             </div>
-                                              <br>
-                                                    <br>
+                                             
                                             <div class="car-choose bookinput-item">
                                                             <select class="custom-select">
                                                               <option selected>Passenger</option>

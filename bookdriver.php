@@ -62,15 +62,12 @@
                                            $conn=null;
                                            foreach($result as $location){
                                            ?>
-
                                            <option><?php echo $location['sublocation']?></option>
                                            <?php }?>
                                        </select>
                                    
 <br>
 <br>
-                                  
-
                                     <select class="custom-select">
                                        <option selected>Sub Drop Location</option>
                                        <?php 
@@ -86,9 +83,6 @@
                                        <option><?php echo $location['location']?></option>
                                        <?php }?>
                                    </select>
-                                    
-
-
                            </form>
                        </div>
 
