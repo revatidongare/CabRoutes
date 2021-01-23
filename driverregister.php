@@ -50,7 +50,7 @@
                                     <br>
                                 <br>
                                <div class="car-choose bookinput-item">
-                                    <select class="carrr" name="type">
+                                    <select class="carrr" name="limit">
                                         <option selected>Passenger Limit</option>
                                                             <?php 
                                             $query = "SELECT * FROM `passengerlimit`";
@@ -63,6 +63,82 @@
                                                     ?>
                                                        
                                                         <option value="<?php echo $passenger['passengerlim']?>"><?php echo $passenger['passengerlim']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
+                                                      <br>
+                                                      <br>
+                                    <div class="car-choose bookinput-item">
+                                    <select class="route" name="route1">
+                                        <option selected>Select Route-1</option>
+                                                            <?php 
+                                            $query = "SELECT * FROM `addroute`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $route){
+                                                    ?>
+                                                       
+                                                        <option value="<?php echo $route['route']?>"><?php echo $route['route']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
+                                                      <br>
+                                                      <br>
+                                                      <div class="car-choose bookinput-item">
+                                    <select class="route1" name="route2">
+                                        <option selected>Select Route-2</option>
+                                                            <?php 
+                                            $query = "SELECT * FROM `addroute`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $route1){
+                                                    ?>
+                                                       
+                                                        <option value="<?php echo $route1['route']?>"><?php echo $route1['route']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
+                                                      <br>
+                                                      <br>
+                                                      <div class="car-choose bookinput-item">
+                                    <select class="route2" name="route3">
+                                        <option selected>Select Route-3</option>
+                                                            <?php 
+                                            $query = "SELECT * FROM `addroute`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $route2){
+                                                    ?>
+                                                       
+                                                        <option value="<?php echo $route2['route']?>"><?php echo $route2['route']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
+                                                      <br>
+                                                      <br>
+                                                <div class="car-choose bookinput-item">
+                                    <select class="route3" name="route4">
+                                        <option selected>Select Route-4</option>
+                                                            <?php 
+                                            $query = "SELECT * FROM `addroute`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $route3){
+                                                    ?>
+                                                       
+                                                        <option value="<?php echo $route3['route']?>"><?php echo $route3['route']?></option>
                                                          <?php }?>
                                                           </select>
                                                       </div>

@@ -90,6 +90,21 @@ $conn=null;
 }
 
 
+//addroute
+if(isset($_POST['addroute'])){
+  $routee = $_POST['routee'];
+  $q = "INSERT INTO `addroute`(`route`)VALUES('$routee')";
+  $stmt=$conn->prepare($q);
+  $stmt->execute();
+  $row = $stmt->fetch();
+$conn=null;
+  if ($row) {
+    header('location: addroute.php?login=1');
+  }
+  else{
+    header('location: addroute.php?q=1');
+  }
+}
 
 
 

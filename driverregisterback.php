@@ -7,6 +7,10 @@ if(isset($_POST['driverregister'])){
   $address = $_POST['address'];
   $type = $_POST['type'];
   $limit = $_POST['limit'];
+  $route1 = $_POST['route1'];
+  $route2 = $_POST['route2'];
+  $route3 = $_POST['route3'];
+  $route4 = $_POST['route4'];
   $idate = $_POST['idate'];
   $edate = $_POST['edate'];
   $texp = $_POST['texp'];
@@ -157,7 +161,7 @@ if(isset($_POST['driverregister'])){
     }
 
   }
-  $q = "INSERT INTO `drivermaster`( `Fullname`, `VehicleNo`, `Driveraddress`,`Cartype`,`Passengerlimit`,`DriverPhoto`, `Vehiclephoto`, `VehicleAmenities`, `DriverLicenseCopy`, `DriverAadhaarCard`, `DriverLicenseIssueDdate`, `DriverLicenseExpiredDate`, `Driverexperience`, `VehicleInsuranceIssuedate`, `ContactNumber`, `EmergencyContactNumber`, `EmailAddress`, `Password`)VALUES('$name', '$vname', '$address','$type','$limit','$i','$im','$ima','$imag','$image','$idate', '$edate', '$texp', '$iidate', '$cnumber', '$enumber', '$email', '$password')";
+  $q = "INSERT INTO `drivermaster`( `Fullname`, `VehicleNo`, `Driveraddress`,`Cartype`,`Passengerlimit`,`Route1`,`Route2`,`Route3`,`Route4`,`DriverPhoto`, `Vehiclephoto`, `VehicleAmenities`, `DriverLicenseCopy`, `DriverAadhaarCard`, `DriverLicenseIssueDdate`, `DriverLicenseExpiredDate`, `Driverexperience`, `VehicleInsuranceIssuedate`, `ContactNumber`, `EmergencyContactNumber`, `EmailAddress`, `Password`)VALUES('$name', '$vname', '$address','$type','$limit','$route1','$route2','$route3','$route4','$i','$im','$ima','$imag','$image','$idate', '$edate', '$texp', '$iidate', '$cnumber', '$enumber', '$email', '$password')";
   $stmt=$conn->prepare($q);
   $stmt->execute();
   // $row = $stmt->fetch();
