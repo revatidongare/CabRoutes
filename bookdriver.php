@@ -52,9 +52,9 @@
                                  <form action="back.php">
                                     
                                         <select class="custom-select">
-                                           <option selected> Sub Pickup Location</option>
+                                           <option selected>Sub Pickup Location</option>
                                            <?php 
-                                           $query = "SELECT * FROM `pickup` where `flag`=1";
+                                           $query = "SELECT * FROM `subpickup` ";
                                            include 'config.php';
                                            $stmt=$conn->prepare($query);
                                            $stmt->execute();
@@ -69,7 +69,7 @@
 <br>
 <br>
                                     <select class="custom-select">
-                                       <option selected>Sub Drop Location</option>
+                                       <option selected>Sub Drop Location  </option>
                                        <?php 
                                        $query = "SELECT * FROM `droplocation` where `flag`=1";
                                        include 'config.php';

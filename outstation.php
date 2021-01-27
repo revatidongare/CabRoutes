@@ -273,20 +273,19 @@
                                                       </div>
                                                        <div class="car-choose bookinput-item">
                                                             <select class="custom-select">
-                                                              <option selected>Passenger</option>
-                                                              <option value="1">1</option>
-                                                              <option value="2">2</option>
-                                                              <option value="3">3</option>
-                                                              <option value="4">4</option>
-                                                              <option value="5">5</option>
-                                                              <option value="6">6</option>
-                                                              <option value="7">7</option>
-                                                              <option value="8">8</option>
-                                                              <option value="9">9</option>
-                                                              <option value="10">10</option>
-                                                              <option value="11">11</option>
-                                                              <option value="12">12</option>
-                                                              <option value="13">Above 12</option>
+                                                              <option selected>Passenger Limit</option>
+                                                            <?php 
+                                                $query = "SELECT * FROM `passengerlimit`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $limit){
+                                                    ?>
+                                                       
+                                                        <option><?php echo $limit['passengerlim']?></option>
+                                                         <?php }?>
                                                              
                                                           </select>
                                                       </div>
@@ -298,14 +297,23 @@
                                                         <div class="car-choose bookinput-item">
                                                             <select class="custom-select">
                                                               <option selected>Choose Vehicle</option>
-                                                              <option value="1">BMW</option>
-                                                              <option value="2">Audi</option>
-                                                              <option value="3">Lexus</option>
+                                                            <?php 
+                                                $query = "SELECT * FROM `addcar`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $car){
+                                                    ?>
+                                                       
+                                                        <option><?php echo $car['cartype']?></option>
+                                                         <?php }?>
                                                           </select>
                                                       </div>
                                                     
                                                       <div class="bookcar-btn bookinput-item">
-                                                        <button type="submit">Search Cabs</button>
+                                                        <button type="submit" name="search">Search Cabs</button>
                                                     </div>
                                                 </form>
                                             </div>
