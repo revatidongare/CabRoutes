@@ -31,15 +31,18 @@
 								<li class="breadcrumb-item active">Location</li>
 							</ul>
 						</div>
-						<div class="col-sm-6 col">
-								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Loation</a>
+						<div class="col-sm-4 col">
+								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Drop Loation</a>
+							</div>
+							<div class="col-sm-8 col">
+								<a href="#add_locationn" data-toggle="modal" class="btn btn-primary float-right mt-2">Add DropSub Location</a>
 							</div>
 
 					</div>
 					<br>
 							
 					<div class="row">
-					<div class="col-sm-12">
+					<div class="col-sm-6">
 						<div class="card">
 							<div class="card-body">
 								<div class="table-responsive">
@@ -83,7 +86,57 @@
 								</div>
 							</div>
 						</div>
-					</div>			
+					</div>
+						<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<div class="table-responsive">
+									<div class="table-responsive">
+										<table class="datatable table table-hover table-center mb-0">
+											<thead>
+												<tr>
+													<th>Location ID</th>
+													<th>Location</th>
+													<th>DropSub Location</th>
+												</tr>
+											</thead>
+											<tbody>
+												<?php 
+												$query = "SELECT * FROM `subdrop`";
+												include '../config.php';
+												$stmt=$conn->prepare($query);
+												$stmt->execute();
+												$result=$stmt->fetchAll();
+												$conn=null;
+												foreach($result as $location){
+													?>
+													<tr>
+										<td><?php echo $location['subid']?></td>
+										
+											<?php
+											$lo =  $location['id'];
+									$q = "SELECT * FROM `droplocation` where `id`= '$lo'";
+									include '../config.php';
+											$stmt1=$conn->prepare($q);
+												$stmt1->execute();
+												$result1=$stmt1->fetchAll();
+												$conn=null;
+												foreach($result1 as $loc){
+													?>
+												<td><?php echo $loc['location']?></td>
+												<?php
+											}?>
+
+
+								<td><?php echo $location['sublocation']?></td>
+						<?php }?>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>				
 				</div>
 				</div>
 				<!-- /Page Header -->
@@ -151,6 +204,53 @@
 								<br>
 								<br>
 								<button type="submit" name="droplocationn" class="btn btn-primary btn-block">Add Location</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="modal fade" id="add_locationn" aria-hidden="true" role="dialog">
+				<div class="modal-dialog modal-dialog-centered" role="document" >
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Add DropSub Location</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form action="back.php" method="post" enctype="multipart/form-data">
+								 <div class="car-choose bookinput-item">
+                                                           <select class="custom-select" name="locationid">
+                                                             <option selected>Choose Location</option>
+                                                            <?php 
+                                                $query = "SELECT * FROM `droplocation`";
+                                                include '../config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $location){
+                                                    ?>
+                                                       
+                                                        <option value="<?php echo $location['id']?>">
+                                             <?php echo $location['location']?></option>
+                                                         <?php }?>
+                                                          </select>
+                                                      </div>
+                                                      <br>
+                                                      <br>
+								<div class="row form-row">
+									<div class="col-12 col-sm-12">
+										<div class="form-group">
+											<label>DropSub Location</label>
+											<input type="text" name="locationn" class="form-control">
+										</div>
+									</div>
+									</div>	
+								<br>
+								<br>
+								<button type="submit" name="subdroplocation" class="btn btn-primary btn-block">Add DropSub Location</button>
 							</form>
 						</div>
 					</div>

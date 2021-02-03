@@ -54,7 +54,7 @@
                                         <select class="custom-select">
                                            <option selected>Sub Pickup Location</option>
                                            <?php 
-                                           $query = "SELECT * FROM `subpickup` ";
+                                           $query = "SELECT * FROM `subpickup`";
                                            include 'config.php';
                                            $stmt=$conn->prepare($query);
                                            $stmt->execute();
@@ -71,7 +71,7 @@
                                     <select class="custom-select">
                                        <option selected>Sub Drop Location  </option>
                                        <?php 
-                                       $query = "SELECT * FROM `droplocation` where `flag`=1";
+                                       $query = "SELECT * FROM `subdrop`";
                                        include 'config.php';
                                        $stmt=$conn->prepare($query);
                                        $stmt->execute();
@@ -80,7 +80,7 @@
                                        foreach($result as $location){
                                        ?>
 
-                                       <option><?php echo $location['location']?></option>
+                                       <option><?php echo $location['sublocation']?></option>
                                        <?php }?>
                                    </select>
                            </form>

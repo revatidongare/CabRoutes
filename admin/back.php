@@ -56,6 +56,24 @@ $conn=null;
   }
 }
 
+
+//addDropSublocation
+if(isset($_POST['subdroplocation'])){
+  $locationid = $_POST['locationid'];
+   $locationn = $_POST['locationn'];
+  $q = "INSERT INTO `subdrop`(`id`,`sublocation`)VALUES('$locationid','$locationn')";
+  $stmt=$conn->prepare($q);
+  $stmt->execute();
+  $row = $stmt->fetch();
+$conn=null;
+  if ($row) {
+    header('location: drop.php?login=1');
+  }
+  else{
+    header('location: drop.php?q=1');
+  }
+}
+
 //add car
 if(isset($_POST['cartype'])){
   $typee = $_POST['typee'];

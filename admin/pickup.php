@@ -27,7 +27,7 @@
 							<h3 class="page-title">Add Pickup Location</h3>
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-								<li class="breadcrumb-item"><a href="javascript:(0);">Users</a></li>
+							<li class="breadcrumb-item"><a href="javascript:(0);">Users</a></li>
 								<li class="breadcrumb-item active">Location</li>
 							</ul>
 						</div>
@@ -35,12 +35,12 @@
 								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Pickup Location</a>
 							</div>
 							<div class="col-sm-8 col">
-								<a href="#add_locationn" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Sub Location</a>
+								<a href="#add_locationn" data-toggle="modal" class="btn btn-primary float-right mt-2">Add PickupSub Location</a>
 							</div>
 					</div>
 					<br>
 					<div class="row">
-					<div class="col-sm-6">
+					<div class="col-sm-5">
 						<div class="card">
 							<div class="card-body">
 								<div class="table-responsive">
@@ -85,7 +85,7 @@
 							</div>
 						</div>
 					</div>
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 						<div class="card">
 							<div class="card-body">
 								<div class="table-responsive">
@@ -95,7 +95,7 @@
 												<tr>
 													<th>Location ID</th>
 													<th>Location</th>
-													<th>Sub Location</th>
+													<th>PickupSub Location</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -216,7 +216,7 @@
 				<div class="modal-dialog modal-dialog-centered" role="document" >
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title">Add Sub Location</h5>
+							<h5 class="modal-title">Add PickupSub Location</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -246,14 +246,14 @@
 								<div class="row form-row">
 									<div class="col-12 col-sm-12">
 										<div class="form-group">
-											<label>Sub Location</label>
+											<label>PickSub Location</label>
 											<input type="text" name="locationn" class="form-control">
 										</div>
 									</div>
 									</div>	
 								<br>
 								<br>
-								<button type="submit" name="subpicklocation" class="btn btn-primary btn-block">Add Sub Location</button>
+								<button type="submit" name="subpicklocation" class="btn btn-primary btn-block">Add PickupSub Location</button>
 							</form>
 						</div>
 					</div>
