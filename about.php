@@ -17,7 +17,7 @@
                     <div class="section-title  text-center">
                         <h2>About US</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
     </section>
     <section id="about-area" class="section-padding">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
                         <h2>About us</h2>
@@ -33,24 +33,25 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-lg-6">
                     <div class="display-table">
                         <div class="display-table-cell">
                             <div class="about-content">
-                                <p>Lorem simply dummy is a texted of the printing costed and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+                                <p>Cab routes is sub division of Travelog Holidays & Travelog World Immigration Services Pvt.Ltd.<br> 
+                                After having a successful set up of Travelog Holidays in 2013,for 07 Years & having an enumerable experience of Travel Industry,Mr.Paresh decided to offer some Offbeat Unexplored Destinations for Indian Tourists,opened a new venture called as Journey World Destination Management Pvt.Ltd.Pune in March-2019.His ability to research about the product & certification from Frankfinn Institue adds more to the company.His vision is to offer new,unexplored destinations which are not majorly explored by Indians...makes it more special.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="assets/img/home-2-about.png" alt="JSOFT">
+                        <img src="assets/img/paresh.jpg" alt="director">
                     </div>
                 </div>
             </div>
-            <div class="about-feature-area">
+            <!-- <div class="about-feature-area">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="about-feature-item active">
@@ -74,10 +75,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
-    <section id="our-facility" class="section-padding overlay">
+    <!-- <section id="our-facility" class="section-padding overlay">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
@@ -130,7 +131,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
       <div id="partner-area">
         <div class="container-fluid">
             <div class="row">
@@ -195,7 +196,7 @@
             </div>
         </div>
     </div>
-<section id="testimonial-area" class="section-padding">
+<!-- <section id="testimonial-area" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -234,7 +235,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <?php include 'includes/footer.php'?>
     <div class="scroll-top">
     <img src="assets/img/scroll-top.png" alt="JSOFT">

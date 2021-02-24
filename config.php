@@ -19,5 +19,6 @@ $conn = new PDO('mysql:host=localhost;dbname=cabroute', $user, $pass);
 // 		die("Connection failed: " . $conn->connect_error);
 // 	}
 //   	$conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  	
 ?>
 

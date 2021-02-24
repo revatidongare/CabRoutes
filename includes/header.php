@@ -67,6 +67,10 @@
                                     <li><a href="passengerlogin.php">Passenger Login</a></li>
                                     </ul>
                                 </li> 
+
+                                <li><a href="terms.php">Terms & Conditions</a></li>
+
+
                             </ul>
                         </nav>
                     </div>
