@@ -29,7 +29,7 @@
                                                         <form action="back.php">
                                                             <div class="car-choose bookinput-item">
 
-                                                        <select class="custom-select" id="pickup_select" name="pickup_select">
+                                                        <select class="custom-select" id="pickup_select" name="PICKUP">
                                                              <option selected>Pickup Location</option>
                                                             <?php 
                                                 $query = "SELECT * FROM `pickup` where `flag`=1";
@@ -48,14 +48,14 @@
 
                                                       <div class="car-choose bookinput-item">
 
-                                                        <select class="custom-select" id="subpickup_id" name="subpickup_id">
+                                                        <select class="custom-select" id="SUBPICKUP_id" name="subpickup_id">
                                                              <option selected>Pickup Sub-Location</option>
                                                           </select>
                                                       </div>
                                                       
                                                             
                                                     <div class="car-choose bookinput-item">
-                                                        <select class="custom-select" id="drop_select">
+                                                        <select class="custom-select" id="drop_select" name="DROP">
                                                              <option selected>Drop Location</option>
                                                             <?php 
                                                 $query = "SELECT * FROM `droplocation` where `flag`=1";
@@ -74,7 +74,7 @@
 
                                                        <div class="car-choose bookinput-item">
 
-                                                        <select class="custom-select" id="subdrop_id" name="subdrop_id">
+                                                        <select class="custom-select" id="SUBDROP_id" name="subdrop_id">
                                                              <option selected>Drop Sub-Location</option>
                                                           </select>
                                                       </div>
@@ -265,17 +265,37 @@
           $.ajax({
              
             url:"searchdriver.php",
-            data:{pickup_select:id},
+            data:{PICKUP:id},
             type:'POST',
             success:function(response) {
               var resp = $.trim(response);
-              $("#subpickup_id").html(resp);
+              $("#SUBPICKUP_id").html(resp);
             }
           });
         } else {
-          $("#subpickup_id").html("<option value=''>------- Select --------</option>");
+          $("#SUBPICKUP_id").html("<option value=''>------- Select --------</option>");
         }
       });
+
+       $("#drop_select").change(function() {
+        var id = $(this).val();
+                
+        if(id != "") {
+          $.ajax({
+            url:"searchdriver.php",
+            data:{DROP:id},
+            type:'POST',
+            success:function(response){
+              var resp = $.trim(response);
+              $("#SUBDROP_id").html(resp);
+            }
+          });
+        } 
+        else {
+          $("#SUBDROP_id").html("<option value=''>------- Select --------</option>");
+        }
+      });
+    
 
       // $("#subpickup_id").change(function() {
       //   var id = $(this).val();
@@ -296,25 +316,6 @@
         // }
       // });
 
-       $("#drop_select").change(function() {
-        var id = $(this).val();
-                
-        if(id != "") {
-          $.ajax({
-            url:"searchdriver.php",
-            data:{drop_select:id},
-            type:'POST',
-            success:function(response){
-              var resp = $.trim(response);
-              $("#subdrop_id").html(resp);
-            }
-          });
-        } 
-        else {
-          $("#subdrop_id").html("<option value=''>------- Select --------</option>");
-        }
-      });
-    
     });
 
 </script>
