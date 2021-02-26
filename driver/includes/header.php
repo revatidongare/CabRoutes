@@ -2,10 +2,10 @@
 			
 				<!-- Logo -->
                 <div class="header-left">
-                    <a href="index1.php" class="logo">
+                    <a href="index.php" class="logo">
 						<img src="../assets/img/cab.png" alt="Logo">
 					</a>
-					<a href="index1.php" class="logo logo-small">
+					<a href="index.php" class="logo logo-small">
 						<img src="../assets/img/cab.png" alt="Logo" width="100%" height="100%">
 					</a>
                 </div>
@@ -116,7 +116,7 @@
 								</div>
 								<div class="user-text">
 									<h6>Cab Routes</h6>
-									<p class="text-muted mb-0">Administrator</p>
+									<p class="text-muted mb-0">Driver</p>
 								</div>
 							</div>
 							<!-- <a class="dropdown-item" href="profile.html">My Profile</a>

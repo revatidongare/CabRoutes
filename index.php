@@ -45,7 +45,7 @@
                     <div class="section-title  text-center">
                         <h2>About us</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -54,7 +54,8 @@
                     <div class="display-table">
                         <div class="display-table-cell">
                             <div class="about-content">
-                                <p>Lorem simply dummy is a texted of the printing costed and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+                                <p>Cab routes is sub division of Travelog Holidays & Travelog World Immigration Services Pvt.Ltd.<br> 
+                                After having a successful set up of Travelog Holidays in 2013,for 07 Years & having an enumerable experience of Travel Industry,Mr.Paresh decided to offer some Offbeat Unexplored Destinations for Indian Tourists,opened a new venture called as Journey World Destination Management Pvt.Ltd.Pune in March-2019.His ability to research about the product & certification from Frankfinn Institue adds more to the company.His vision is to offer new,unexplored destinations which are not majorly explored by Indians...makes it more special.</p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-feature-area">
+          <!--   <div class="about-feature-area">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="about-feature-item active">
@@ -89,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
    
@@ -157,7 +158,7 @@
             </div>
         </div>
     </div>
-    <section id="service-area" class="section-padding">
+   <!--  <section id="service-area" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -205,7 +206,7 @@
        </div>
    </div>
 </div>
-</section>
+</section> -->
 <section id="funfact-area" class="overlay section-padding">
     <div class="container">
         <div class="row">
@@ -370,7 +371,7 @@
     </div>
 </div>
 </section>
-<section id="pricing-area" class="section-padding overlay">
+<!-- <section id="pricing-area" class="section-padding overlay">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -429,8 +430,8 @@
             </div>
         </div>
     </div>
-</section>
-<section id="team-area" class="section-padding">
+</section> -->
+<!-- <section id="team-area" class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -588,9 +589,9 @@
             </div>
         </div>
     </div>
-</section>
-<div id="mobileapp-video-bg"></div>
-<section id="mobile-app-area">
+</section> -->
+<!-- <div id="mobileapp-video-bg"></div> -->
+<!-- <section id="mobile-app-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -605,8 +606,8 @@
             </div>
         </div>
     </div>
-</section>
-<section id="tips-article-area" class="section-padding">
+</section> -->
+<!-- <section id="tips-article-area" class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -706,7 +707,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
     <?php include 'includes/footer.php'?>
 <div class="scroll-top">
     <img src="assets/img/scroll-top.png" alt="JSOFT">

@@ -29,7 +29,7 @@
                                 <a class="forgot-link" href="driverregister.php">No account Yet? </a>
                                 </div>
                                 <div class="log-btn">
-                                    <button type="submit" name="driverlogin" id="driverlogin"><i class="fa fa-sign-in"></i> Log In</button>
+                                    <button type="submit" name="driverlogin" id="driverlogin"><i class="fa fa-sign-in"><a href="driver/dashboard.php"></i> Log In</button>
                                 </div>
                                  <div class="text-right">
                                     <a class="forgot-link" href="driverlogin.php">Forgot Password</a>

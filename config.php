@@ -1,9 +1,9 @@
 <?php
 	$user='root';
 	$pass='';
-     $dbname='cabroute';
+     $dbname='cabroutes';
 	
-$conn = new PDO('mysql:host=localhost;dbname=cabroute', $user, $pass);
+$conn = new PDO('mysql:host=localhost;dbname=cabroutes', $user, $pass);
 	if (!$conn) {
 		die("Connection failed: " . $conn->connect_error);
 	}

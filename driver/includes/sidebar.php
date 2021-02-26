@@ -17,15 +17,15 @@
 							<!-- <li> 
 								<a href="specialities.php"><i class="fe fe-users"></i> <span>Specialities</span></a>
 							</li> -->
-							<li> 
+							<!-- <li> 
 								<a href="agentlist.php"><i class="fe fe-user-plus"></i> <span>Agents</span></a>
-							</li>
+							</li> -->
 							<li> 
 								<a href="passengerlist.php"><i class="fe fe-user-plus"></i> <span>Passengers</span></a>
 							</li>
-							<li> 
+							<!-- <li> 
 								<a href="driverlist.php"><i class="fe fe-user"></i> <span>Drivers</span></a>
-							</li>
+							</li> -->
 							<li class="submenu">
 								<a href="#"><i class="fe fe-document"></i> <span>Location</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">

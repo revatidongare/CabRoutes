@@ -47,7 +47,7 @@
 												<tr>
 													<th>Driver Name</th>
 													<th>Year Of Experiance</th>
-													<th>Patient Name</th>
+													<th>Passenger Name</th>
 													<th>Pickup Date&Time</th>
 													<th>Status</th>
 													<th class="text-right">Amount</th>
@@ -61,7 +61,7 @@
 															<a href="profile.html">Pallavi Tambe</a>
 														</h2>
 													</td>
-													<td>10 Year</td>
+													<td>10Year</td>
 													<td>
 														<h2 class="table-avatar">
 															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient1.jpg" alt="User Image"></a>

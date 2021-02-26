@@ -1,7 +1,7 @@
 <?php $page = 'login'; ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'includes/head1.php'?>
+<?php include 'includes/head.php'?>
     <body>
 	
 		<!-- Main Wrapper -->

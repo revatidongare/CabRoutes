@@ -47,7 +47,7 @@
 												<tr>
 													<th>Driver Name</th>
 													<th>Year Of Experiance</th>
-													<th>Patient Name</th>
+													<th>Customer Name</th>
 													<th>Pickup Date&Time</th>
 													<th>Status</th>
 													<th class="text-right">Amount</th>
