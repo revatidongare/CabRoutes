@@ -41,7 +41,7 @@
                                                 foreach($result as $location){
                                                     ?>
                                                        
-                                                        <option><?php echo $location['location']?></option>
+                                                        <option value="<?php echo $location['id']; ?>"><?php echo $location['location']?></option>
                                                          <?php }?>
                                                           </select>
                                                       </div>
@@ -67,7 +67,7 @@
                                                 foreach($result as $location){
                                                     ?>
                                                        
-                                                        <option><?php echo $location['location']?></option>
+                                                        <option value="<?php echo $location['id']; ?>"><?php echo $location['location']?></option>
                                                          <?php }?>
                                                           </select>
                                                       </div>
@@ -258,12 +258,11 @@
 <script type="text/javascript">
 
    $(document).ready(function() {
-      $("#pick_select").change(function() {
+      $("#pickup_select").change(function() {
         var id = $(this).val();
         
         if(id != "") {
-          $.ajax({
-             
+          $.ajax({             
             url:"searchdriver.php",
             data:{PICKUP:id},
             type:'POST',
@@ -277,6 +276,10 @@
         }
       });
 
+//       });
+
+
+// $(document).ready(function() {
        $("#drop_select").change(function() {
         var id = $(this).val();
                 

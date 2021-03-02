@@ -3,7 +3,7 @@
 	$pass='';
      $dbname='cabroutes';
 	
-$conn = new PDO('mysql:host=localhost;dbname=cabroutes', $user, $pass);
+$conn = new PDO('mysql:host=localhost;dbname=cabroute', $user, $pass);
 	if (!$conn) {
 		die("Connection failed: " . $conn->connect_error);
 	}
