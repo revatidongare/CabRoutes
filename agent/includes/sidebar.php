@@ -26,19 +26,19 @@
 							<li> 
 								<a href="adddriver.php"><i class="fe fe-user"></i> <span>Add Driver</span></a>
 							</li>
-							<li class="submenu">
+						<!-- 	<li class="submenu">
 								<a href="#"><i class="fe fe-document"></i> <span>Location</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 						<li><a href="pickup.php">Pickup Location</a></li>
 						<li><a href="drop.php">Drop Location</a></li>
 								</ul>
-							</li>
+							</li> -->
 				<li> 
 					<a href="addcar.php"><i class="fa fa-car" aria-hidden="true"></i> <span>Add CarType</span></a>
 				</li>
-				<li> 
+				<!-- <li> 
 					<a href="addroute.php"><i class="fa fa-road" aria-hidden="true"></i><span>Add Routes</span></a>
-				</li>
+				</li> -->
 						</ul>
 					</div>
                 </div>

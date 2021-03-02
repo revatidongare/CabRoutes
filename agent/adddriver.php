@@ -40,41 +40,76 @@
 							</div> -->
 						</div>
 						<br>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="table-responsive">
-											<div class="table-responsive">
-												<table class="datatable table table-hover table-center mb-0">
-													<thead>
-														<tr>
-															<th>Car Id</th>
-															<th>CarType</th>
-														</tr>
-													</thead>
-													<tbody>
-														<?php 
-														$query = "SELECT * FROM `addcar`";
-														include '../config.php';
-														$stmt=$conn->prepare($query);
-														$stmt->execute();
-														$result=$stmt->fetchAll();
-														$conn=null;
-														foreach($result as $location){
-															?>
-															<tr>
-																<td><?php echo $location['carid']?></td>
-																<td><?php echo $location['cartype']?></td>
-															<?php }?>
-														</tbody>
-													</table>
-												</div>
-											</div>
-										</div>
+					<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="table-responsive">
+									<div class="table-responsive">
+										<table class="datatable table table-hover table-center mb-0">
+											<thead>
+												<tr>
+													<th>Driver ID</th>
+													<th>Driver Name</th>
+													<th>Vehicle No</th>
+													<th>Address</th>
+													<th>Car Type</th>
+													<th>Passenger limit</th>
+													<th>Vehicle Photo</th>
+													<th>Vehicle Amenities</th>
+													<th>Driver License Copy</th>
+													<th>Driver Aadhaar Card</th>
+													<th>Driver Experience</th>
+													<th>Contact Number</th>
+													<th>Emergency Contact Number</th>
+													<th>Email Address</th>
+													<th>Rate</th>
+													<th>Active</th>
+												</tr>
+											</thead>
+											<tbody>
+												<?php 
+												$query = "SELECT * FROM `drivermaster`";
+												include '../config.php';
+												$stmt=$conn->prepare($query);
+												$stmt->execute();
+												$result=$stmt->fetchAll();
+												$conn=null;
+												foreach($result as $driver){
+													?>
+													<tr>
+										<td><?php echo $driver['id']?></td>
+								<td>
+								<h2 class="table-avatar">
+							<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="../assets/img/driver/<?php echo $driver['DriverPhoto']?>" alt="User Image"></a>
+						<a href="profile.html"><?php echo $driver['Fullname']?></a>
+								</h2>
+								</td>
+								<td><?php echo $driver['VehicleNo']?></td>
+								<td><?php echo $driver['Driveraddress']?></td>
+								<td><?php echo $driver['Cartype']?></td>
+								<td><?php echo $driver['Passengerlimit']?></td>
+	
+	<td><img src="../assets/img/driver/<?php echo $driver['Vehiclephoto']?>" width="50px" height="50px";></td>
+	<td><img src="../assets/img/driver/<?php echo $driver['VehicleAmenities']?>" width="50px" height="50px";></td>
+	<td><img src="../assets/img/driver/<?php echo $driver['DriverLicenseCopy']?>" width="50px" height="50px";></td>
+	<td><img src="../assets/img/driver/<?php echo $driver['DriverAadhaarCard']?>" width="50px" height="50px";></td>
+								<td><?php echo $driver['Driverexperience']?></td>
+								<td><?php echo $driver['ContactNumber']?></td>
+								<td><?php echo $driver['EmergencyContactNumber']?></td>
+								<td><?php echo $driver['EmailAddress']?></td>
+								<td><?php echo $driver['Rate']?></td>
+								<td><?php echo $driver['Active']?></td>
+													</tr>
+												<?php }?>
+											</tbody>
+										</table>
 									</div>
-								</div>					
+								</div>
 							</div>
+						</div>
+					</div>			
+				</div>
 						</div>
 						<!-- /Page Header -->
 
@@ -120,7 +155,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<form action="back.php" method="post" enctype="multipart/form-data">
+						<form action="adddriverback.php" method="post" enctype="multipart/form-data">
 							<div class="row form-row">
 								<div class="col-6 col-sm-6">
 									<div class="form-group">
@@ -280,48 +315,48 @@
 							</div>
 							<div class="row form-row">
 								<div class="col-6 col-sm-6" style="margin:auto";>
-								 <label style="padding-left: 10px">Driver Photos</label>
+									<label style="padding-left: 10px">Driver Photos</label>
 								</div>
 								<div class="col-6 col-sm-6">
-								 <input type="file" name="i" id="i">
+									<input type="file" name="i" id="i">
 								</div>
 							</div>
-								<div class="row form-row">
+							<div class="row form-row">
 								<div class="col-6 col-sm-6" style="margin:auto";>
-								 <label style="padding-left: 10px">Vehicle Photos with Vehicle Number</label>
+									<label style="padding-left: 10px">Vehicle Photos with Vehicle Number</label>
 								</div>
 								<div class="col-6 col-sm-6">
-								<input type="file" name="im" id="im">
+									<input type="file" name="im" id="im">
 								</div>
 							</div>
-								<div class="row form-row">
+							<div class="row form-row">
 								<div class="col-6 col-sm-6" style="margin:auto";>
-								 <label style="padding-left: 10px">Vehicle Amenities</label>
+									<label style="padding-left: 10px">Vehicle Amenities</label>
 								</div>
 								<div class="col-6 col-sm-6">
-							<input type="file"name="ima" id="ima">
+									<input type="file"name="ima" id="ima">
 								</div>
 							</div>
-								<div class="row form-row">
+							<div class="row form-row">
 								<div class="col-6 col-sm-6" style="margin:auto";>
-								 <label style="padding-left: 10px">Driver License Copy</label>
+									<label style="padding-left: 10px">Driver License Copy</label>
 								</div>
 								<div class="col-6 col-sm-6">
-							 <input type="file" name="imag" id="imag">
+									<input type="file" name="imag" id="imag">
 								</div>
 							</div>
-									<div class="row form-row">
+							<div class="row form-row">
 								<div class="col-6 col-sm-6" style="margin:auto";>
-								 <label style="padding-left: 10px">Driver Aadhaar Card</label>
+									<label style="padding-left: 10px">Driver Aadhaar Card</label>
 								</div>
 								<div class="col-6 col-sm-6">
-							      <input type="file" name="image" id="image">
+									<input type="file" name="image" id="image">
 								</div>
 							</div>
-						<div class="row form-row">
+							<div class="row form-row">
 								<div class="col-6 col-sm-6">
 									<div class="form-group">
-										 <input type="text" placeholder="Email Address" name="email" id="email" class="form-control">
+										<input type="text" placeholder="Email Address" name="email" id="email" class="form-control">
 
 									</div>
 								</div>
@@ -331,10 +366,68 @@
 									</div>
 								</div>
 							</div>
+
+							<div class="row form-row">
+								<div class="col-6 col-sm-6">
+									<div class="form-group">
+										<label>Driver License Issued  date</label>
+										<input type="date"name="idate" id="idate">
+
+									</div>
+								</div>
+								<div class="col-6 col-sm-6">
+									<div class="form-group">
+										<label>Driver License Expiry Date</label>
+										<input type="date" name="edate" id="edate">
+									</div>
+								</div>
+							</div>
+							<div class="row form-row">
+								<div class="col-8 col-sm-8">
+									<div class="form-group">
+										<label>Vehicle Insurance Issue date</label>
+										<input type="date"name="iidate" id="iidate">
+
+									</div>
+								</div>	
+							</div>
+							<div class="row form-row">
+								<div class="col-6 col-sm-6">
+									<div class="form-group">
+										<input type="text" placeholder="Contact Number" name="cnumber" id="cnumber" class="form-control">
+
+									</div>
+								</div>
+								<div class="col-6 col-sm-6">
+									<div class="form-group">
+						<input type="text" placeholder="Emergency Contact Number
+										" name="enumber" id="enumber" class="form-control">
+									</div>
+								</div>
+							</div>
+								<div class="row form-row">
+								<div class="col-2 col-sm-2">
+									<div class="form-group">
+										 <label class="focus-label"  style="margin-top: 30px;"> Password </label>
+
+									</div>
+								</div>
+								<div class="col-6 col-sm-6">
+									<div class="form-group">
+						 <input type="password" value="" id="myInput" style="margin: 20px;background-color: aliceblue; border-color: black"; name="password" id="password">
+									</div>
+								</div>
+								<div class="col-4 col-sm-4">
+									<div class="form-group">
+						 <input type="checkbox" onclick="myFunction()" style="margin-top: 30px">Show Password
+									</div>
+								</div>
+							</div>
+							
 							
 							
 
-							<button type="submit" name="cartype" class="btn btn-primary btn-block">Add Driver</button>
+							<button type="driverregister" name="driverregister"><i class="fa fa-check-square"></i> Register</button>
 						</form>
 					</div>
 				</div>
@@ -358,3 +451,13 @@
 				<!--echo '<script> alert(" Successfully Logout..")</script>';-->
 			<?php }
 		} ?>
+		    <script type="text/javascript">
+    function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
