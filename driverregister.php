@@ -106,7 +106,7 @@
                                                       </div>
                                                       <br>
                                                       <br>
-                                                      <div class="car-choose bookinput-item">
+                                        <div class="car-choose bookinput-item">
                                     <select class="route2" name="route3">
                                         <option selected>Select Route-3</option>
                                                             <?php 

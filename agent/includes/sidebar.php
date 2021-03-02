@@ -24,7 +24,7 @@
 								<a href="invoicer.php"><i class="fe fe-user-plus"></i> <span>Invoice Report</span></a>
 							</li>
 							<li> 
-								<a href="driverlist.php"><i class="fe fe-user"></i> <span>Drivers</span></a>
+								<a href="adddriver.php"><i class="fe fe-user"></i> <span>Add Driver</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="fe fe-document"></i> <span>Location</span> <span class="menu-arrow"></span></a>

@@ -131,8 +131,35 @@
 								</div>
 							</div>
 							<div class="invoice-info">
-								<h5>Other information</h5>
-								<p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed dictum ligula, cursus blandit risus. Maecenas eget metus non tellus dignissim aliquam ut a ex. Maecenas sed vehicula dui, ac suscipit lacus. Sed finibus leo vitae lorem interdum, eu scelerisque tellus fermentum. Curabitur sit amet lacinia lorem. Nullam finibus pellentesque libero.</p>
+								<h5>Covid 19 Pandemic Safety :</h5>
+								<br>
+								<p class="text-muted mb-0">Your safety is our responsibility. Therefore, we have taken stringent Covid-19 safety measures to protect all of our guests Onboarding our vehicle. While we are closely following the guidelines of the National Health Authorities, we have also introduced enhanced safety measures.<br>
+> Our chauffeurs will be wearing masks at all times.<br>
+> Our chauffeurs will open and close the door to minimize direct contact between the car and the guest.<br>
+> Cleaning and disinfecting the vehicle before each rental.<br>
+> Using only standard R1/Oxivir disinfectant.</p>
+<br>
+							</div>
+							<div class="invoice-info">
+								<h5>Terms And Conditions</h5>
+								
+								<p class="text-muted mb-0"> > We offers car rentals in All over India and at International with Hourly, Daily, Weekly and Monthly plans to fulfill your business travel needs, leisure travel needs and your weekend getaway needs, Airport /Railway station pick and drop .<br>
+> Our all  Car rental is included with Insurance<br>
+> Our all drivers will be co operative, supportive and Informative.<br>
+> For all outside trips . our  Drivers will be available for between 09 a.m. to 6.00 p.m.<br>
+> For local city trips ,they will be available according to your pick up and drop timings.  <br>
+> All drivers Service timings will be up to 10 hours daily.<br>
+> All Toll, Parking, Driver Allowances, Taxes included<br></p>
+<br>
+							</div>
+										<div class="invoice-info">
+								<h5>Cancelation Policies</h5>
+							
+								<p class="text-muted mb-0"> > Rs. 500 cancelation fees is applicable  if Trip cancel before 36 hours of travel start timing.<br>
+> Rs.1000 Cancelation Fees is applicable if trip cancel  between 36 hours to 48 hours of travel start timing.<br>
+> 25 % fees is applicable on total cost if cancel between 48 hours to 24 hours of travel start timing. Remaining 75 % amount will get refunded<br>
+> 50 % fees is applicable if cancel within 24 hours of travel timing. Remaining 50 % amount will get refunded<br>
+> All refund will get settled within 15 working days.</p>
 							</div>
 						</div>
 						
