@@ -124,6 +124,22 @@ $conn=null;
   }
 }
 
+//add date
+if(isset($_POST['adddatee'])){
+  $idate = $_POST['idate'];
+  $q = "INSERT INTO `drivermaster`(`Availability`)VALUES('$idate')";
+  $stmt=$conn->prepare($q);
+  $stmt->execute();
+  $row = $stmt->fetch();
+$conn=null;
+  if ($row) {
+    header('location: addavailability.php?login=1');
+  }
+  else{
+    header('location: addavailability.php?q=1');
+  }
+}
+
 
 
 

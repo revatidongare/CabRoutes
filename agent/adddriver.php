@@ -423,11 +423,7 @@
 									</div>
 								</div>
 							</div>
-							
-							
-							
-
-							<button type="driverregister" name="driverregister"><i class="fa fa-check-square"></i> Register</button>
+							<button type="driverregister" name="driverregister"class="btn btn-primary btn-block">Add Driver</button>
 						</form>
 					</div>
 				</div>

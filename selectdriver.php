@@ -29,9 +29,15 @@
                 <div class="col-lg-12">
                     <?php 
                             if(isset($_POST['search'])){
-                                $doctor = $_POST['doctor'];
-                                $location = $_POST['location'];
-                                $query = "SELECT * FROM `driver` WHERE `city` = '$location' AND `active` = 1 OR `fname`= '$doctor' OR `hospital` = '$doctor'";
+                                $name = $_POST['name'];
+                                $vname = $_POST['vname'];
+                                $type = $_POST['type'];
+                                $limit = $_POST['limit'];
+                               $route1 = $_POST['route1'];
+                               $route2 = $_POST['route2'];
+                               $route3 = $_POST['route3'];
+                               $route4 = $_POST['route4'];
+                                $query = "SELECT * FROM `drivermaster` WHERE `Route1`  = '%route1%' OR `Route2`  = '%route2%' OR `Route3`  = '%route3%' OR `Route3`  = '%route4%' AND  `Fullname`= '$name' AND `Cartype` = '$type' AND `Passengerlimit` = '$limit'";
                                 include 'config.php';
                                 $stmt=$conn->prepare($query);
                                 $stmt->execute();
@@ -47,16 +53,16 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="article-thumb">
-                                    <img src="assets/img/driver/<?php echo $doctor['DriverPhoto']?>" alt="driver image">
+                                    <img src="assets/img/driver/<?php echo $driver['DriverPhoto']?>" alt="driver image">
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="display-table">
                                     <div class="display-table-cell">
                                         <div class="article-body">
-                                            <h3><a href="article-details.html">Wliquam sit amet urna eullam</a></h3>
+                                            <h3><a href="article-details.html"><?php echo $driver['name']?></a></h3>
                                             <div class="article-meta">
-                                                <a href="#" class="author">By :: <span>Admin</span></a>
+                                                <a href="#" class="author"><?php echo $driver['vname']?></a>
                                                 <a href="#" class="commnet">Comments :: <span>10</span></a>
                                             </div>
 
