@@ -48,12 +48,14 @@
 											<thead>
 												<tr>
 													<th>Date Id</th>
-													<th>Add Date</th>
+													<th>To</th>
+													<th>From</th>
 												</tr>
 											</thead>
 											<tbody>
 												<?php 
-												$query = "SELECT * FROM `drivermaster`";
+												$id = $_SESSION['id'];
+												$query = "SELECT * FROM `drivermaster` WHERE `id`='$id'";
 												include '../config.php';
 												$stmt=$conn->prepare($query);
 												$stmt->execute();
@@ -63,7 +65,8 @@
 													?>
 													<tr>
 										<td><?php echo $location['id']?></td>
-								<td><?php echo $location['Availability']?></td>
+								<td><?php echo $location['To']?></td>
+								<td><?php echo $location['Fromm']?></td>
 								<?php }?>
 											</tbody>
 										</table>
@@ -126,8 +129,16 @@
 								<div class="row form-row">
 									<div class="col-12 col-sm-12">
 										<div class="form-group">
-											<label>Add Availability</label>
+											<label>To</label>
 										<input type="date"name="idate" id="idate">
+										</div>
+									</div>
+									</div>
+										<div class="row form-row">
+									<div class="col-12 col-sm-12">
+										<div class="form-group">
+											<label>From</label>
+										<input type="date"name="iidate" id="iidate">
 										</div>
 									</div>
 									</div>

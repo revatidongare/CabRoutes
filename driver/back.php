@@ -125,14 +125,16 @@ $conn=null;
 }
 
 //add date
+include 'session.php';
 if(isset($_POST['adddatee'])){
   $idate = $_POST['idate'];
-  $q = "INSERT INTO `drivermaster`(`Availability`)VALUES('$idate')";
-  $stmt=$conn->prepare($q);
-  $stmt->execute();
-  $row = $stmt->fetch();
-$conn=null;
-  if ($row) {
+    $iidate = $_POST['iidate'];
+   $id = $_SESSION['id'];
+  $q = "UPDATE `drivermaster` SET `To`='$idate',`Fromm`='$iidate' WHERE `id`='$id'";
+$stmt=$conn->prepare($q);
+         $res=$stmt->execute();
+
+  if ($res) {
     header('location: addavailability.php?login=1');
   }
   else{

@@ -26,7 +26,7 @@
                                         <div class="tab-pane fade show active" id="popular_cars" role="tabpanel" aria-labelledby="home-tab">
                                             <div class="popular-cars-wrap">
                                                 <div class="popucar-menu text-center">
-                                                    <form action="selectdriver.php">
+                                                    <form action="selectdriver.php" method="post">
                                                         <div class="car-choose bookinput-item">
 
                                                             <select class="custom-select" id="pickup_select" name="PICKUP">
@@ -80,7 +80,7 @@
                                            </div>
 
                                         <div class="pick-date bookinput-item">
-                                            <input id="startDate2" placeholder="Pick Date" />
+                                            <input id="startDate2" placeholder="Pick Date" name="idate" />
                                         </div>
                                                         <!-- <div class="retern-date bookinput-item">
                                                 <input id="endDate2" placeholder="Return Date" />
@@ -187,11 +187,11 @@
                                             </div>
 
                                             <div class="retern-date bookinput-item">
-                                                <input id="endDate2" placeholder="Return Date" />
+                                                <input id="endDate2" placeholder="Return Date"  name="iidate" />
                                             </div>
                                             
                                             <div class="car-choose bookinput-item">
-                                                <select class="custom-select">
+                                                <select class="custom-select" name="limit" id="limit">
                                                    <option selected>Passenger Limit</option>
                                                    <?php 
                                                    $query = "SELECT * FROM `passengerlimit`";
@@ -211,7 +211,7 @@
 
 
                                         <div class="car-choose bookinput-item">
-                                            <select class="custom-select">
+                                            <select class="custom-select" name="type">
                                               <option selected>Choose Vehicle</option>
                                               <?php 
                                               $query = "SELECT * FROM `addcar`";

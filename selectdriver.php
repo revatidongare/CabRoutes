@@ -29,15 +29,13 @@
                 <div class="col-lg-12">
                     <?php 
                             if(isset($_POST['search'])){
-                                $name = $_POST['name'];
-                                $vname = $_POST['vname'];
                                 $type = $_POST['type'];
                                 $limit = $_POST['limit'];
-                               $route1 = $_POST['route1'];
-                               $route2 = $_POST['route2'];
-                               $route3 = $_POST['route3'];
-                               $route4 = $_POST['route4'];
-                                $query = "SELECT * FROM `drivermaster` WHERE `Route1`  = '%route1%' OR `Route2`  = '%route2%' OR `Route3`  = '%route3%' OR `Route3`  = '%route4%' AND  `Fullname`= '$name' AND `Cartype` = '$type' AND `Passengerlimit` = '$limit'";
+                               $PICKUP = $_POST['PICKUP'];
+                               $DROP = $_POST['DROP'];
+                               $idate = $_POST['idate'];
+                               $iidate = $_POST['iidate'];
+                                $query = "SELECT * FROM `drivermaster` WHERE `Route1`  = '%PICKUP%' OR `Route2`  = '%PICKUP%' OR `Route3`  = '%PICKUP%' OR `Route3`  = '%PICKUP%' AND `Route1`  = '%DROP%' OR `Route2`  = '%DROP%' OR `Route3`  = '%DROP%' OR `Route3`  = '%DROP%' AND `Cartype` = '$type' AND `Passengerlimit` = '$limit' AND `To` = '$idate' AND `From` = '$iidate'";
                                 include 'config.php';
                                 $stmt=$conn->prepare($query);
                                 $stmt->execute();
@@ -60,9 +58,9 @@
                                 <div class="display-table">
                                     <div class="display-table-cell">
                                         <div class="article-body">
-                                            <h3><a href="article-details.html"><?php echo $driver['name']?></a></h3>
+                                            <h3><a href="article-details.html"><?php echo $driver['Fullname']?></a></h3>
                                             <div class="article-meta">
-                                                <a href="#" class="author"><?php echo $driver['vname']?></a>
+                                                <a href="#" class="author"><?php echo $driver['VehicleNo']?></a>
                                                 <a href="#" class="commnet">Comments :: <span>10</span></a>
                                             </div>
 
