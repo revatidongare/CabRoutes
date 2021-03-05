@@ -30,12 +30,13 @@
                     <?php 
                             if(isset($_POST['search'])){
                                 $type = $_POST['type'];
+
                                 $limit = $_POST['limit'];
                                $PICKUP = $_POST['PICKUP'];
-                               $DROP = $_POST['DROP'];
+                            
                                $idate = $_POST['idate'];
                                $iidate = $_POST['iidate'];
-                                $query = "SELECT * FROM `drivermaster` WHERE `Route1`  = '%PICKUP%' OR `Route2`  = '%PICKUP%' OR `Route3`  = '%PICKUP%' OR `Route3`  = '%PICKUP%' AND `Route1`  = '%DROP%' OR `Route2`  = '%DROP%' OR `Route3`  = '%DROP%' OR `Route3`  = '%DROP%' AND `Cartype` = '$type' AND `Passengerlimit` = '$limit' AND `To` = '$idate' AND `From` = '$iidate'";
+                                $query = "SELECT * FROM `drivermaster` WHERE `Cartype` = '$type' AND `Passengerlimit` = '$limit' AND `Route1`  = '$PICKUP' OR `Route2`  = '$PICKUP' OR `Route3`  = '$PICKUP' OR `Route4`  = '$PICKUP' AND `To` BETWEEN '$idate' and '$iidate' AND `Fromm` BETWEEN '$idate' and '$iidate'";
                                 include 'config.php';
                                 $stmt=$conn->prepare($query);
                                 $stmt->execute();
@@ -46,31 +47,51 @@
                                     foreach($result as $driver){
                                         ?>  
 
-
                     <article class="single-article">
                         <div class="row">
-                            <div class="col-lg-5">
+                            <div class="col-lg-3">
                                 <div class="article-thumb">
                                     <img src="assets/img/driver/<?php echo $driver['DriverPhoto']?>" alt="driver image">
+                                    <br>
+                                    <br>
+                                    <h5><a href="article-details.html" style="color: black"><?php echo $driver['Fullname']?></a></h5>
                                 </div>
                             </div>
-                            <div class="col-lg-7">
-                                <div class="display-table">
-                                    <div class="display-table-cell">
-                                        <div class="article-body">
-                                            <h3><a href="article-details.html"><?php echo $driver['Fullname']?></a></h3>
-                                            <div class="article-meta">
-                                                <a href="#" class="author"><?php echo $driver['VehicleNo']?></a>
-                                                <a href="#" class="commnet">Comments :: <span>10</span></a>
-                                            </div>
-
-                                            <div class="article-date">25 <span class="month">jan</span></div>
-
-                                            <p>Wlam aiber vestibulum fringilla oremedad ipsum dolor sit amet consectetur adipisicing elit sed doned eiusmod tempored incididunt ut labore et dolore magna aliquaa enimd ad minim veniad.</p>
-
-                                            <a href="article-details.html" class="readmore-btn">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
+                          
+                            <div class="col-lg-6">
+                                        <div class="tech-info-table">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <th>Driver Name:</th>
+                                                    <td><?php echo $driver['Fullname']?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Vehicle No:</th>
+                                                    <td><?php echo $driver['VehicleNo']?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Contact Number:</th>
+                                                    <td><?php echo $driver['ContactNumber']?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Driver Experience:</th>
+                                                    <td><?php echo $driver['Driverexperience']?></td>
+                                                </tr>
+                                                 <tr>
+                                                    <th>Driver Email Address:</th>
+                                                    <td><?php echo $driver['EmailAddress']?></td>
+                                                </tr>
+                                            </table>
+                                            <a href="article-details.html" class="readmore-btn">Book Now <i class="fa fa-long-arrow-right"></i></a>
+                                      </div>
+                                  </div>
+                            
+                             <div class="col-lg-3">
+                                <div class="article-thumb">
+                                    <img src="assets/img/driver/<?php echo $driver['Vehiclephoto']?>" alt="driver image">
+                                    <br>
+                                    <br>
+                                    <h5><a href="article-details.html" style="color: black"><?php echo $driver['Cartype']?></a></h5>
                                 </div>
                             </div>
                         </div>

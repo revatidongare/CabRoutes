@@ -30,19 +30,21 @@
                                                         <div class="car-choose bookinput-item">
 
                                                             <select class="custom-select" id="pickup_select" name="PICKUP">
-                                                               <option selected>Pickup Location</option>
-                                                               <?php 
-                                                               $query = "SELECT * FROM `pickup` where `flag`=1";
-                                                               include 'config.php';
-                                                               $stmt=$conn->prepare($query);
-                                                               $stmt->execute();
-                                                               $result=$stmt->fetchAll();
-                                                               $conn=null;
-                                                               foreach($result as $location){
-                                                                ?>
+                                                               <option selected>Select Route</option>
+                                                              <?php 
+                                            $query = "SELECT * FROM `addroute`";
+                                                include 'config.php';
+                                                $stmt=$conn->prepare($query);
+                                                $stmt->execute();
+                                                $result=$stmt->fetchAll();
+                                                $conn=null;
+                                                foreach($result as $route){
+                                                    ?>
+                                                       
+                                                        <option value="<?php echo $route['route']?>"><?php echo $route['route']?></option>
+                                                         <?php }?>
 
-                                                                <option value="<?php echo $location['id']; ?>"><?php echo $location['location']?></option>
-                                                            <?php }?>
+                                                                
                                                         </select>
                                                     </div>
 
@@ -54,7 +56,7 @@
                                                    </div>
 
 
-                                                   <div class="car-choose bookinput-item">
+                                                  <!--  <div class="car-choose bookinput-item">
                                                     <select class="custom-select" id="drop_select" name="DROP">
                                                        <option selected>Drop Location</option>
                                                        <?php 
@@ -70,17 +72,17 @@
                                                         <option value="<?php echo $location['id']; ?>"><?php echo $location['location']?></option>
                                                     <?php }?>
                                                 </select>
-                                            </div>
+                                            </div> -->
 
-                                            <div class="car-choose bookinput-item">
+                                           <!--  <div class="car-choose bookinput-item">
 
                                                 <select class="custom-select" id="SUBDROP_id" name="subdrop_id">
                                                    <option selected>Drop Sub-Location</option>
                                                </select>
-                                           </div>
+                                           </div> -->
 
                                         <div class="pick-date bookinput-item">
-                                            <input id="startDate2" placeholder="Pick Date" name="idate" />
+                                            <input  type ="date" id="idate" placeholder="Pick Date" name="idate" />
                                         </div>
                                                         <!-- <div class="retern-date bookinput-item">
                                                 <input id="endDate2" placeholder="Return Date" />
@@ -187,7 +189,7 @@
                                             </div>
 
                                             <div class="retern-date bookinput-item">
-                                                <input id="endDate2" placeholder="Return Date"  name="iidate" />
+                                                <input  type="date" id="iidate" placeholder="Return Date"  name="iidate" />
                                             </div>
                                             
                                             <div class="car-choose bookinput-item">
