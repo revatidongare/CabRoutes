@@ -42,8 +42,9 @@
 													<th>Contact Number</th>
 													<th>Emergency Contact Number</th>
 													<th>Email Address</th>
-													<th>Rate</th>
-													<th>Active</th>
+													<th>Total Rate</th>
+														
+												
 												</tr>
 											</thead>
 											<tbody>
@@ -77,8 +78,8 @@
 								<td><?php echo $driver['ContactNumber']?></td>
 								<td><?php echo $driver['EmergencyContactNumber']?></td>
 								<td><?php echo $driver['EmailAddress']?></td>
-								<td><?php echo $driver['Rate']?></td>
-								<td><?php echo $driver['Active']?></td>
+								<td><?php echo $driver['Totalrate']?></td>
+								
 													</tr>
 												<?php }?>
 											</tbody>

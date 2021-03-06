@@ -124,7 +124,23 @@ $conn=null;
   }
 }
 
+//addrate
+include 'session.php';
+if(isset($_POST['addrate'])){
+  $idate = $_POST['idate'];
+    $iidate = $_POST['iidate'];
+   $id = $_SESSION['id'];
+  $q = "UPDATE `drivermaster` SET `To`='$idate',`Fromm`='$iidate' WHERE `id`='$id'";
+$stmt=$conn->prepare($q);
+         $res=$stmt->execute();
 
+  if ($res) {
+    header('location: addavailability.php?login=1');
+  }
+  else{
+    header('location: addavailability.php?q=1');
+  }
+}
 
 
 

@@ -39,6 +39,9 @@
 				<li> 
 					<a href="addroute.php"><i class="fa fa-road" aria-hidden="true"></i><span>Add Routes</span></a>
 				</li>
+				<li> 
+					<a href="addrate.php"><i class="fa fa-road" aria-hidden="true"></i><span>Add Rate</span></a>
+				</li>
 						</ul>
 					</div>
                 </div>
