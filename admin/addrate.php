@@ -31,9 +31,7 @@
 								
 							</ul>
 						</div>
-						<div class="col-sm-4 col">
-								<a href="#add_location" data-toggle="modal" class="btn btn-primary float-right mt-2">Add Rate</a>
-							</div>
+						
 							
 							
 					</div>
@@ -44,39 +42,60 @@
 							<div class="card-body">
 								<div class="table-responsive">
 									<div class="table-responsive">
-										<table class="datatable table table-hover table-center mb-0">
-											<thead>
-												<tr>
-													<th>Id</th>
-													<th>Driver Name</th>
-													<th>Net Rate</th>
-													<th>Commission</th>
-													<th>Agent Commission</th>
-													<th>Tax(GST)</th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php 
-												$id = $_SESSION['id'];
-												$query = "SELECT * FROM `drivermaster` WHERE `id`='$id'";
-												include '../config.php';
-												$stmt=$conn->prepare($query);
-												$stmt->execute();
-												$result=$stmt->fetchAll();
-												$conn=null;
-												foreach($result as $location){
-													?>
-													<tr>
-										<td><?php echo $location['id']?></td>
-											<td><?php echo $location['Fullname']?></td>
-								<td><?php echo $location['Netrate']?></td>
-								<td><?php echo $location['Commission']?></td>
-								<td><?php echo $location['Agentcommission']?></td>
-								<td><?php echo $location['Taxgst']?></td>
-								<td><?php echo $location['Totalrate']?></td>
-								<?php }?>
-											</tbody>
-										</table>
+										<?php
+							if(isset($_POST['addratee'])){
+							 $id = $_POST['id'];
+							 $query="SELECT * FROM `drivermaster` WHERE `id` ='$id'";
+							 $query_run = mysqli_query($connection,$query);
+
+							 foreach ($query_run as $row) {
+							 	?>
+								
+							<form action="back.php" method="post" enctype="multipart/form-data">
+								<div class="row form-row">
+									<div class="col-12 col-sm-12">
+
+										<div class="form-group">
+											<label>id</label>
+										<input type="text"name="id" value="<?php echo $row['id']?>" class="form-control">
+										</div>
+									</div>
+									
+									<div class="col-12 col-sm-12">
+
+										<div class="form-group">
+											<label>Net Rate</label>
+										<input type="text"name="net" id="net" class="form-control">
+										</div>
+									</div>
+									</div>
+										<div class="row form-row">
+									<div class="col-12 col-sm-12">
+										<div class="form-group">
+											<label>Commission</label>
+										<input type="text"name="commission" id="commission" class="form-control">
+										</div>
+									</div>
+									</div>
+									<div class="row form-row">
+									<div class="col-12 col-sm-12">
+										<div class="form-group">
+											<label>Agent Commission</label>
+										<input type="text"name="acommission" id="acommission" class="form-control">
+										</div>
+									</div>
+									</div>
+									<div class="row form-row">
+									<div class="col-12 col-sm-12">
+										<div class="form-group">
+											<label>Tax</label>
+										<input type="text" name="tax" id="tax" class="form-control">
+										</div>
+									</div>
+									</div>
+								<button type="submit" name="addrate" class="btn btn-primary btn-block">Add Rate</button>
+							</form>
+
 									</div>
 								</div>
 							</div>
@@ -122,7 +141,7 @@
 </html>
 
 <!-- Add Modal -->
-			<div class="modal fade" id="add_location" aria-hidden="true" role="dialog">
+			<!-- <div class="modal fade" id="add_location" aria-hidden="true" role="dialog">
 				<div class="modal-dialog modal-dialog-centered" role="document" >
 					<div class="modal-content">
 						<div class="modal-header">
@@ -135,6 +154,10 @@
 							<form action="back.php" method="post" enctype="multipart/form-data">
 								<div class="row form-row">
 									<div class="col-12 col-sm-12">
+										<div class="form-group">
+											<label>Id</label>
+										<input type="text"name="id" id="id" class="form-control">
+										</div>
 										<div class="form-group">
 											<label>Net Rate</label>
 										<input type="text"name="net" id="net" class="form-control">
@@ -170,7 +193,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 
 

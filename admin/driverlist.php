@@ -17,6 +17,7 @@
 								<li class="breadcrumb-item active">Driver</li>
 							</ul>
 						</div>
+
 					</div>
 				</div>
 				<div class="row">
@@ -43,6 +44,7 @@
 													<th>Emergency Contact Number</th>
 													<th>Email Address</th>
 													<th>Total Rate</th>
+													<th>Add Rate</th>
 														
 												
 												</tr>
@@ -79,6 +81,10 @@
 								<td><?php echo $driver['EmergencyContactNumber']?></td>
 								<td><?php echo $driver['EmailAddress']?></td>
 								<td><?php echo $driver['Totalrate']?></td>
+								<td>
+								
+								<a href="addrate.php"><button type="submit" name="addrate" class="btn btn-primary btn-block">Add Rate</a></button>
+							</td>
 								
 													</tr>
 												<?php }?>
