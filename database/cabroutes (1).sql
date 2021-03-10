@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2021 at 07:36 AM
+-- Generation Time: Mar 10, 2021 at 06:25 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -46,7 +46,8 @@ INSERT INTO `addcar` (`carid`, `cartype`) VALUES
 (7, 'HATCHBACK'),
 (8, 'MINIVAN'),
 (9, 'Crossover'),
-(10, 'Compact Sedan');
+(10, 'Compact Sedan'),
+(11, 'tavera');
 
 -- --------------------------------------------------------
 
@@ -130,6 +131,7 @@ CREATE TABLE `drivermaster` (
   `Fullname` varchar(50) NOT NULL,
   `VehicleNo` varchar(20) NOT NULL,
   `Driveraddress` varchar(50) NOT NULL,
+  `Aboutus` varchar(1000) NOT NULL,
   `Cartype` varchar(50) NOT NULL,
   `Passengerlimit` varchar(50) NOT NULL,
   `Route1` varchar(200) NOT NULL,
@@ -149,16 +151,24 @@ CREATE TABLE `drivermaster` (
   `EmergencyContactNumber` varchar(20) NOT NULL,
   `EmailAddress` varchar(50) NOT NULL,
   `Password` varchar(20) NOT NULL,
-  `Rate` varchar(20) NOT NULL,
-  `Active` int(10) NOT NULL
+  `To` date NOT NULL,
+  `Fromm` date NOT NULL,
+  `Netrate` varchar(200) NOT NULL,
+  `Commission` varchar(200) NOT NULL,
+  `Agentcommission` varchar(200) NOT NULL,
+  `Taxgst` varchar(200) NOT NULL,
+  `Totalrate` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `drivermaster`
 --
 
-INSERT INTO `drivermaster` (`id`, `Fullname`, `VehicleNo`, `Driveraddress`, `Cartype`, `Passengerlimit`, `Route1`, `Route2`, `Route3`, `Route4`, `DriverPhoto`, `Vehiclephoto`, `VehicleAmenities`, `DriverLicenseCopy`, `DriverAadhaarCard`, `DriverLicenseIssueDdate`, `DriverLicenseExpiredDate`, `Driverexperience`, `VehicleInsuranceIssuedate`, `ContactNumber`, `EmergencyContactNumber`, `EmailAddress`, `Password`, `Rate`, `Active`) VALUES
-(1, 'Pallavi Tambe', 'MH12 TB5510', 'Pune,Kalyani-Nagar', 'BMW', '5', 'Pune-Mumbai', 'Pune-Nashik', 'Mumbai-Pune', 'Nagar-Pune', 'IMG-20201105-WA0010.jpg', 'IMG-20201105-WA0009.jpg', 'IMG-20201105-WA0009.jpg', 'IMG-20201105-WA0010.jpg', 'IMG-20201105-WA0007.jpg', '2021-01-24', '2021-01-27', '10year', '2021-01-30', '7547645678', '3457348565', 'pallavi@gmail.com', 'pallavi', '', 0);
+INSERT INTO `drivermaster` (`id`, `Fullname`, `VehicleNo`, `Driveraddress`, `Aboutus`, `Cartype`, `Passengerlimit`, `Route1`, `Route2`, `Route3`, `Route4`, `DriverPhoto`, `Vehiclephoto`, `VehicleAmenities`, `DriverLicenseCopy`, `DriverAadhaarCard`, `DriverLicenseIssueDdate`, `DriverLicenseExpiredDate`, `Driverexperience`, `VehicleInsuranceIssuedate`, `ContactNumber`, `EmergencyContactNumber`, `EmailAddress`, `Password`, `To`, `Fromm`, `Netrate`, `Commission`, `Agentcommission`, `Taxgst`, `Totalrate`) VALUES
+(1, 'Paresh More', 'MH12 TB5510', 'Bedag-Mallewadi Road, Near Second Water Canal,Beda', '', 'BMW', '5', 'Pune-Mumbai', 'Pune-Nashik', 'Mumbai-Pune', 'Nagar-Pune', 'a.jpeg', 'ro.jpeg', 'ro.jpeg', 'r1.jpeg', 'allll.jpeg', '2021-03-05', '2021-03-07', '5Year', '2021-03-20', '08625973366', '785546547687', 'pallavi@gmail.com', 'pallavi', '2021-03-12', '2021-03-28', '56', '78', '56', '', ''),
+(3, 'Pallavi Tambe', 'MH12 TB5510', 'Pune,Kalyani-Nagar', '', 'SPORTS CAR', '5', 'Pune-Mumbai', 'Pune-Nashik', 'Mumbai-Pune', 'Mumbai-Nagar', 'a.jpeg', 'r1.jpeg', 'ro.jpeg', 'ro.jpeg', 'rrom1.jpeg', '2021-03-12', '2021-03-20', '5Year', '2021-03-21', '667867878778', '08625973366', 'jwdmcwork@gmail.com', 'tambe', '2021-03-05', '2021-03-04', '56', '78', '56', '', ''),
+(4, 'Alap', 'MH12 TB5511', 'Pune,Kalyani-Nagar', '', 'COUPE', '6', 'Mumbai-Pune', 'Nagar-Pune', 'Mumbai-Nagar', 'Pune-Nashik', 'r1.jpeg', 'ro.jpeg', 'ro.jpeg', 'r1.jpeg', 'r1.jpeg', '2021-03-12', '2021-03-20', '6Year', '2021-03-21', '08625973366', '08625973366', 'demo@gmail.com', 'demo', '0000-00-00', '2021-03-04', '56', '78', '56', '', ''),
+(6, 'Nrupali', 'MH12 TB1234', 'Pune', 'I have 6 year Experience.', 'BMW', '6', 'Pune-Mumbai', 'Pune-Nashik', 'Mumbai-Pune', 'Nagar-Pune', 'ro.jpeg', 'r1.jpeg', 'a.jpeg', 'ro.jpeg', 'allll.jpeg', '2021-03-12', '2021-03-28', '4Year', '2021-03-25', '08625973366', '08625973366', 'admin@gmail.com', 'nrupali', '0000-00-00', '0000-00-00', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -208,7 +218,8 @@ INSERT INTO `passengerlimit` (`passengerid`, `passengerlim`) VALUES
 (7, 8),
 (8, 9),
 (9, 10),
-(10, 12);
+(10, 12),
+(11, 6);
 
 -- --------------------------------------------------------
 
@@ -386,7 +397,7 @@ ALTER TABLE `subpickup`
 -- AUTO_INCREMENT for table `addcar`
 --
 ALTER TABLE `addcar`
-  MODIFY `carid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `carid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `addroute`
@@ -410,7 +421,7 @@ ALTER TABLE `agentmaster`
 -- AUTO_INCREMENT for table `drivermaster`
 --
 ALTER TABLE `drivermaster`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `droplocation`
@@ -422,7 +433,7 @@ ALTER TABLE `droplocation`
 -- AUTO_INCREMENT for table `passengerlimit`
 --
 ALTER TABLE `passengerlimit`
-  MODIFY `passengerid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `passengerid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `passengermaster`

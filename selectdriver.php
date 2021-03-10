@@ -69,17 +69,18 @@
                                                     <th>Vehicle No:</th>
                                                     <td><?php echo $driver['VehicleNo']?></td>
                                                 </tr>
-                                                <tr>
-                                                    <th>Contact Number:</th>
-                                                    <td><?php echo $driver['ContactNumber']?></td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <th>Driver Experience:</th>
                                                     <td><?php echo $driver['Driverexperience']?></td>
                                                 </tr>
+                                                <tr>
+                                                    <th>Driver License Issued Date</th>
+                                                    <td><?php echo $driver['DriverLicenseIssueDdate']?></td>
+                                                </tr>
                                                  <tr>
-                                                    <th>Driver Email Address:</th>
-                                                    <td><?php echo $driver['EmailAddress']?></td>
+                                                    <th>Driver License Expired Date</th>
+                                                    <td><?php echo $driver['DriverLicenseExpiredDate']?></td>
                                                 </tr>
                                             </table>
                                             <a href="article-details.html" class="readmore-btn">Book Now <i class="fa fa-long-arrow-right"></i></a>
